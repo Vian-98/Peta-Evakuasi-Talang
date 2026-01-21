@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 <title>Peta Jalur Evakuasi Kelurahan Talang 2026</title>
 
+<link rel="icon" type="image/jpeg" href="icon.png"/>
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 <link rel="stylesheet" href="styles.css"/>
@@ -37,6 +39,10 @@
         <i class="fas fa-exclamation-triangle"></i>
         Darurat
       </button>
+      <button class="btn btn-success" onclick="downloadMapImage()">
+        <i class="fas fa-download"></i>
+        Unduh Peta
+      </button>
     </div>
   </div>
 </div>
@@ -53,60 +59,6 @@
     </button>
   </div>
   
-  <div class="control-panel">
-    <h3>
-      <i class="fas fa-layer-group"></i>
-      Tingkat Kerawanan
-    </h3>
-    <div class="legend-item">
-      <div class="legend-color" style="background: #22c55e;"></div>
-      <div class="legend-text">Aman</div>
-    </div>
-    <div class="legend-item">
-      <div class="legend-color" style="background: #84cc16;"></div>
-      <div class="legend-text">Tidak Rawan</div>
-    </div>
-    <div class="legend-item">
-      <div class="legend-color" style="background: #eab308;"></div>
-      <div class="legend-text">Rawan</div>
-    </div>
-    <div class="legend-item">
-      <div class="legend-color" style="background: #f97316;"></div>
-      <div class="legend-text">Sangat Rawan</div>
-    </div>
-    <div class="legend-item">
-      <div class="legend-color" style="background: linear-gradient(135deg, #facc15, #fbbf24);"></div>
-      <div class="legend-text">Jalur Evakuasi (980m)</div>
-    </div>
-  </div>
-  
-  <div class="info-panel">
-    <h3>
-      <i class="fas fa-info-circle"></i>
-      Informasi Penting
-    </h3>
-    <div class="info-grid">
-      <div class="info-item">
-        <div class="info-icon">
-          <i class="fas fa-route"></i>
-        </div>
-        <div>Jalur Evakuasi: 980 meter</div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon">
-          <i class="fas fa-building"></i>
-        </div>
-        <div>Titik Kumpul: Area Hijau</div>
-      </div>
-      <div class="info-item">
-        <div class="info-icon">
-          <i class="fas fa-phone"></i>
-        </div>
-        <div>Hotline: 112 (Darurat)</div>
-      </div>
-    </div>
-  </div>
-  
   <div class="loading" id="loading">
     <div class="spinner"></div>
     <p>Memuat peta...</p>
@@ -120,6 +72,10 @@
     <i class="fas fa-info-circle"></i>
   </button>
 
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 Peta Jalur Evakuasi Kelurahan Talang, Bandar Lampung. All rights reserved.</p>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
